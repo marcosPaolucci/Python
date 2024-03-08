@@ -64,14 +64,13 @@ for num in range(1,6):
     resultado *= num
 print(resultado)
 
+# O Python aceita o else quando usarmos o while
 contagem = 10
-while contagem >= 0 :
-    if contagem > 0:
-        print(contagem)
-    else:
-        print("Fogo!")
-        break
+while contagem > 0 :
+    print(contagem)
     contagem -= 1
+else:
+        print("Fogo!")
 
 while True:
     entrada = int(input("Digite um número: "))
