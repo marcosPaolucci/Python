@@ -4,14 +4,17 @@ non_fibonacci_numbers = []
 for i in range(5):
     num = int(input(f"Digite o {i+1}º número: "))
     
-    a, b = 0, 1
-    while b < num:
-        a, b = b, a + b
-        
-    if b == num:
+    if num == 0:
         fibonacci_numbers.append(num)
     else:
-        non_fibonacci_numbers.append(num)
+        a, b = 0, 1
+        while b < abs(num):
+            a, b = b, a + b
+
+        if b == abs(num):
+            fibonacci_numbers.append(num)
+        else:
+            non_fibonacci_numbers.append(num)
 
 print("Números que fazem parte da sequência de Fibonacci:", fibonacci_numbers)
 print("Números que não fazem parte da sequência de Fibonacci:", non_fibonacci_numbers)
